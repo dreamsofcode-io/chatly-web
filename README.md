@@ -1,8 +1,40 @@
-# React + Vite
+# Chatly
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repo provides the frontend for the Rust Socket.io video by
+[Dreams of Code](https://youtube.com/@dreamsofcode).
 
-Currently, two official plugins are available:
+## Requirements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node v18
+- npm
+
+## Usage
+
+First clone this repo
+
+```shell
+$ git clone git@github.com:dreamsofcode-io/chatly-web
+$ cd chatly-web
+```
+
+Then install the depencencies using npm
+
+```shell
+$ npm install
+```
+
+Finally, run the development server
+
+```shell
+$ npm run dev
+```
+
+## Contributing
+
+This server works with socket.io and both emits events and listens to them.
+
+You should not need to change anything about this server in order to use it
+with the video. If you do find an issue, please raise an issue or submit a
+PR to resolve it.
+
+Thank you!
