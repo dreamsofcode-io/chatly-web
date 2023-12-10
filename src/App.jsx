@@ -81,7 +81,6 @@ function App() {
       text: input,
       room: currentRoom,
     });
-    //setMessages([...messages, msg]);
     setInput("");
   };
 
@@ -150,7 +149,6 @@ function App() {
                       </button>
                     </div>
                   </Transition.Child>
-                  {/* Sidebar component, swap this element with another sidebar if you like */}
                   <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-ctp-base px-6 pb-4">
                     <div className="flex h-16 shrink-0 items-center">
                       <h1 className="text-2xl text-white font-bold py-4">
@@ -213,7 +211,7 @@ function App() {
           </div>
         </aside>
         <div className="h-screen p-4 bg-ctp-crust flex flex-col flex-grow justify-end">
-          <div className="bg-ctp-base flex-grow">
+          <div className="bg-ctp-base rounded-t-lg flex-grow">
             <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-ctp-mantle px-2 sm:px-6 lg:hidden">
               <button
                 type="button"
@@ -230,7 +228,7 @@ function App() {
               </div>
             </div>
 
-            <h1 className="hidden lg:block text-2xl text-center text-white font-bold mb-4">
+            <h1 className="hidden lg:block text-2xl text-center text-white font-bold my-4">
               {currentRoom}
             </h1>
 
