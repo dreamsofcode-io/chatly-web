@@ -73,6 +73,15 @@ function App() {
       msg.date = new Date(msg.date);
       setMessages((messages) => [...messages, msg]);
     });
+
+    socket.on("messages", (msgs) => {
+      console.log("Messages received", msgs);
+      let messages = msgs.messages.map((msg) => {
+        msg.date = new Date(msg.date);
+        return msg;
+      });
+      setMessages(messages);
+    });
   }, []);
 
   const sendMessage = (e) => {
@@ -258,16 +267,17 @@ function App() {
               ))}
             </ul>
           </div>
-          <form className="flex" onSubmit={sendMessage}>
+          <form className="flex h-11" onSubmit={sendMessage}>
             <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              className="flex-1 p-2 rounded-l-md bg-ctp-text text-ctp-base"
+              className="flex-1 p-2 rounded-l-md bg-ctp-text text-ctp-base placeholder-ctp-subtext0"
+              placeholder="Enter something englightened..."
             />
             <button
               type="submit"
-              className="bg-ctp-blue text-ctp-base p-2 rounded-r-md"
+              className="bg-ctp-blue px-6 font-bold text-ctp-base p-2 rounded-r-md"
             >
               Send
             </button>
